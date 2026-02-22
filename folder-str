@@ -1,0 +1,179 @@
+src/
+│
+├── main.jsx
+├── index.css                ← Tailwind base + global styles
+│
+├── app/
+│   ├── App.jsx
+│   ├── routes.jsx
+│   ├── ProtectedRoute.jsx
+│   └── styles/
+│       └── app.css          ← layout-level overrides (optional)
+│
+├── features/
+│
+│   ├── auth/
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   └── Profile.jsx
+│   │   │
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
+│   │   │
+│   │   ├── hooks/
+│   │   │   └── useAuth.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── auth.css     ← auth animations + glass effects
+│   │   │
+│   │   └── authService.js
+│   │
+│   ├── home/
+│   │   ├── pages/
+│   │   │   └── Home.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── HeroSection.jsx
+│   │   │   ├── FeatureCards.jsx
+│   │   │   └── QuickActions.jsx
+│   │   │
+│   │   └── styles/
+│   │       └── home.css     ← hero animation + floating effects
+│   │
+│   ├── assessments/
+│   │   ├── pages/
+│   │   │   ├── AssessmentsHome.jsx
+│   │   │   ├── AssessmentIntro.jsx
+│   │   │   ├── AssessmentTest.jsx
+│   │   │   ├── AssessmentResult.jsx
+│   │   │   └── AssessmentHistory.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── AssessmentCard.jsx
+│   │   │   ├── QuestionItem.jsx
+│   │   │   ├── ProgressBar.jsx
+│   │   │   └── ScoreChart.jsx
+│   │   │
+│   │   ├── data/
+│   │   │   ├── anxietyQuestions.js
+│   │   │   ├── depressionQuestions.js
+│   │   │   ├── bipolarQuestions.js
+│   │   │   ├── ocdQuestions.js
+│   │   │   └── stressQuestions.js
+│   │   │
+│   │   ├── utils/
+│   │   │   └── scoringUtils.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── assessments.css   ← progress + transitions
+│   │   │
+│   │   └── assessmentService.js
+│   │
+│   ├── games/
+│   │   ├── pages/
+│   │   │   └── GamesHome.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── MemoryGame.jsx
+│   │   │   ├── PuzzleGame.jsx
+│   │   │   ├── WordFinderGame.jsx
+│   │   │   └── BlinkingBallGame.jsx
+│   │   │
+│   │   ├── styles/
+│   │   │   └── games.css     ← hover effects + scaling
+│   │   │
+│   │   └── gamesUtils.js
+│   │
+│   ├── relaxation/
+│   │   ├── pages/
+│   │   │   └── RelaxationHome.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── MoodColorSelector.jsx
+│   │   │   ├── MusicPlayer.jsx
+│   │   │   ├── NatureVideoPlayer.jsx
+│   │   │   ├── RainSoundPlayer.jsx
+│   │   │   └── BreathingAnimation.jsx
+│   │   │
+│   │   ├── data/
+│   │   │   ├── musicList.js
+│   │   │   └── moodColors.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── relaxation.css   ← breathing animation
+│   │   │
+│   │   └── relaxationService.js
+│   │
+│   ├── blog/
+│   │   ├── pages/
+│   │   │   ├── BlogHome.jsx
+│   │   │   └── BlogDetail.jsx
+│   │   │
+│   │   ├── components/
+│   │   │   ├── BlogCard.jsx
+│   │   │   ├── BlogFilter.jsx
+│   │   │   └── BlogCategoryTabs.jsx
+│   │   │
+│   │   ├── data/
+│   │   │   └── blogMockData.js
+│   │   │
+│   │   ├── utils/
+│   │   │   └── blogFilterUtils.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── blog.css       ← blog hover + card animation
+│   │   │
+│   │   └── blogService.js
+│   │
+│   └── admin/
+│       ├── pages/
+│       │   ├── AdminLogin.jsx
+│       │   ├── AdminDashboard.jsx
+│       │   ├── ManageAssessments.jsx
+│       │   ├── ManageBlogs.jsx
+│       │   ├── ManageUsers.jsx
+│       │   └── Analytics.jsx
+│       │
+│       ├── components/
+│       │   ├── AdminSidebar.jsx
+│       │   └── StatsCard.jsx
+│       │
+│       ├── styles/
+│       │   └── admin.css      ← sidebar active styles
+│       │
+│       └── adminService.js
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── MainLayout.jsx
+│   │   └── styles/
+│   │       └── layout.css     ← navbar/footer effects
+│   │
+│   └── ui/
+│       ├── Button.jsx
+│       ├── Card.jsx
+│       ├── Input.jsx
+│       ├── Modal.jsx
+│       ├── Loader.jsx
+│       └── styles/
+│           └── ui.css         ← reusable animations
+│
+├── hooks/
+│   ├── useLocalStorage.js
+│   └── useDebounce.js
+│
+├── services/
+│   └── api.js
+│
+├── utils/
+│   ├── constants.js
+│   └── helpers.js
+│
+└── assets/
+    ├── images/
+    ├── music/
+    ├── videos/
+    └── icons/
