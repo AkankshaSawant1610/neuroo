@@ -2,21 +2,19 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "../features/auth/pages/Login";
 import Register from "../features/auth/pages/Register";
 import Home from "../features/home/pages/Home";
+import AboutUs from "../features/home/pages/AboutUs"; // 1. IMPORT THE REAL FILE
 import MainLayout from "../components/layout/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
-
-// Minimal components for other routes to prevent errors
-const Placeholder = ({ name }) => <div className="p-20 text-center text-2xl font-bold">{name} Page Coming Soon</div>;
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public Routes */}
+        {/* Public */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-        {/* Protected Routes - Wrapped in MainLayout for the Navbar */}
+        {/* Protected Area */}
         <Route
           path="/"
           element={
@@ -25,16 +23,17 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         >
-          {/* These will show up in the Outlet of MainLayout */}
+          {/* These appear inside MainLayout's <Outlet /> */}
           <Route index element={<Home />} />
-          <Route path="about" element={<Placeholder name="About Us" />} />
-          <Route path="relaxation" element={<Placeholder name="Relaxation Corner" />} />
-          <Route path="assessments" element={<Placeholder name="Assessments" />} />
-          <Route path="blog" element={<Placeholder name="Blogs" />} />
-          <Route path="games" element={<Placeholder name="Games" />} />
+          <Route path="about" element={<AboutUs />} /> {/* 2. USE THE REAL COMPONENT */}
+          
+          {/* Placeholders for other pages until we build them */}
+          <Route path="relaxation" element={<div className="p-20 text-center text-3xl font-bold">Explore More Coming Soon</div>} />
+          <Route path="assessments" element={<div className="p-20 text-center text-3xl font-bold">Assessments Coming Soon</div>} />
+          <Route path="blog" element={<div className="p-20 text-center text-3xl font-bold">Blogs Coming Soon</div>} />
+          <Route path="games" element={<div className="p-20 text-center text-3xl font-bold">Games Coming Soon</div>} />
         </Route>
 
-        {/* Catch-all: Redirect to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

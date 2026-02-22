@@ -101,3 +101,53 @@
 .playful-btn:hover {
   transform: scale(1.05) translateY(-5px);
 }
+/* Moving Dots Background */
+.dots-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #fdf2f8; /* Very soft pink base */
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  animation: float-dots 15s infinite ease-in-out;
+}
+
+/* Candy Palette Dots */
+.dot-pink { width: 150px; height: 150px; background: #fbcfe8; top: 10%; left: 10%; }
+.dot-blue { width: 200px; height: 200px; background: #bae6fd; top: 50%; right: 15%; animation-delay: -2s; }
+.dot-purple { width: 120px; height: 120px; background: #ddd6fe; bottom: 10%; left: 20%; animation-delay: -4s; }
+.dot-yellow { width: 180px; height: 180px; background: #fef08a; top: 20%; right: 30%; animation-delay: -7s; }
+
+@keyframes float-dots {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -60px) scale(1.2); }
+}
+
+/* Grid & Card Styles */
+.about-grid-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.about-grid-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: white;
+  box-shadow: 0 20px 40px rgba(244, 114, 182, 0.1);
+}
+
+.gradient-text-pink {
+  background: linear-gradient(to right, #ec4899, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
