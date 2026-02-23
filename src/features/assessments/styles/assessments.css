@@ -120,14 +120,17 @@
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #fdfcf0;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #fbcfe8; /* Pink-200 */
   border-radius: 20px;
   border: 3px solid #fdfcf0;
 }
+
 /* Drift animation for the background text */
 @keyframes float-drift {
   0% { transform: translate(0, 0) rotate(0deg); }
@@ -151,11 +154,9 @@
   66% { transform: translate(-20px, 20px) scale(0.9); }
   100% { transform: translate(0px, 0px) scale(1); }
 }
-
 .animate-blob {
   animation: blob-move 10s infinite alternate;
 }
-
 .animation-delay-2000 {
   animation-delay: 2s;
 }
@@ -164,31 +165,25 @@
   50% { transform: translate(15px, -15px) rotate(1.5deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
-
 .animate-float-slow {
   animation: float-drift 7s ease-in-out infinite;
 }
-
 .animate-float-delayed {
   animation: float-drift 10s ease-in-out infinite;
   animation-delay: 2s;
 }
-
 @keyframes blob-move {
   0% { transform: translate(0px, 0px) scale(1); }
   33% { transform: translate(40px, -50px) scale(1.1); }
   66% { transform: translate(-30px, 30px) scale(0.9); }
   100% { transform: translate(0px, 0px) scale(1); }
 }
-
 .animate-blob {
   animation: blob-move 12s infinite alternate ease-in-out;
 }
-
 .animation-delay-2000 {
   animation-delay: 2.5s;
 }
-
 /* Rounded Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
