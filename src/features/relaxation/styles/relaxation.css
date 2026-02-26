@@ -1,0 +1,160 @@
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes ash-fly {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-200px) scale(0); opacity: 0; }
+}
+
+.animate-ripple { animation: ripple 2s ease-out forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+.ash-particle { animation: ash-fly 2s ease-out forwards; }
+
+/* Custom Scrollbar for the garden */
+.garden-canvas::-webkit-scrollbar { display: none; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+@keyframes ripple-light {
+  0% { transform: scale(0.5); opacity: 1; border-width: 4px; }
+  100% { transform: scale(3); opacity: 0; border-width: 1px; }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-sparkle { animation: sparkle 1.5s infinite; }
+.animate-ripple-light { animation: ripple-light 1.5s ease-out forwards; }
+
+.dreamy-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 4px solid white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar { width: 5px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes cloud-puff {
+  0% { transform: scale(1); opacity: 1; filter: blur(0px); }
+  100% { transform: scale(2); opacity: 0; filter: blur(20px); }
+}
+
+@keyframes ripple-light {
+  0% { transform: scale(0.5); opacity: 1; border-width: 6px; }
+  100% { transform: scale(4); opacity: 0; border-width: 1px; }
+}
+
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-puff { animation: cloud-puff 2s ease-out forwards; }
+.animate-ripple-light { animation: ripple-light 1.5s ease-out forwards; }
+
+.cartoon-shadow {
+  box-shadow: 0 10px 0 0 rgba(0,0,0,0.05);
+}
+
+.dreamy-glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border: 4px solid white;
+}
+
+/* Custom Tooltip for Garden */
+.plant-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #ff6b6b;
+  white-space: nowrap;
+  box-shadow: 0 4px 0px rgba(0,0,0,0.1);
+  border: 2px solid #fee2e2;
+  z-index: 20;
+}
+
+.plant-container:hover .plant-tooltip {
+  visibility: visible;
+}
+/* Dreamy Bouncy Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+/* The Dashed Ground at the bottom of the garden */
+.garden-ground {
+  background-image: linear-gradient(to right, #ffffff 50%, transparent 50%);
+  background-size: 20px 4px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* Beautiful Pill Tooltip from your image */
+.pill-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #ff8fa3;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 2px solid #fff1f2;
+  z-index: 50;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.plant-wrapper:hover .pill-tooltip {
+  visibility: visible;
+  opacity: 1;
+  bottom: 125%;
+}
+
+.custom-card {
+  background: white;
+  border: 4px solid #f8fafc;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.03);
+}
+
+.instruction-tag {
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

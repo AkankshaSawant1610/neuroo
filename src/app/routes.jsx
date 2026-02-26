@@ -52,10 +52,12 @@ import Register from "../features/auth/pages/Register";
 import Home from "../features/home/pages/Home";
 import AboutUs from "../features/home/pages/AboutUs"; 
 import ExploreMore from "../features/home/pages/ExploreMore"; 
+
 import AssessmentsHome from '../features/assessments/pages/AssessmentsHome';
 import AssessmentIntro from '../features/assessments/pages/AssessmentIntro';
 import AssessmentTest from '../features/assessments/pages/AssessmentTest';
 import AssessmentResult from '../features/assessments/pages/AssessmentResult';
+import RelaxationHome from "../features/relaxation/pages/RelaxationHome";
 import MainLayout from "../components/layout/MainLayout";
 import ProtectedRoute from "./ProtectedRoute";
 
@@ -82,7 +84,7 @@ const AppRoutes = () => {
           <Route path="explore" element={<ExploreMore />} /> 
           
           {/* Relaxation */}
-          <Route path="relaxation" element={<div className="p-20 text-center text-3xl font-bold">Relaxation Coming Soon</div>} />
+           <Route path="relaxation" element={<RelaxationHome />} />
           
           {/* Assessments Module */}
           <Route path="assessments" element={<AssessmentsHome />} />

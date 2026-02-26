@@ -92,12 +92,13 @@ src/
 │   │   │   └── RelaxationHome.jsx
 │   │   │
 │   │   ├── components/
-│   │   │   ├── MoodColorSelector.jsx
-│   │   │   ├── MusicPlayer.jsx
-│   │   │   ├── NatureVideoPlayer.jsx
-│   │   │   ├── RainSoundPlayer.jsx
-│   │   │   └── BreathingAnimation.jsx
-│   │   │
+|   |   |   |__BurnNote.jsx
+|   |   |   |__PeaceGarden.jsx
+|   |   |   |__SkyRelease.jsx
+|   |   |   |__SilentScribble.jsx
+|   |   |   |__MirrorOfKindness.jsx
+|   |   |   |__WaveOfWorries.jsx
+|   |   |
 │   │   ├── data/
 │   │   │   ├── musicList.js
 │   │   │   └── moodColors.js
